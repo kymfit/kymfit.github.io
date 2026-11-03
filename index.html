@@ -111,11 +111,12 @@ section{position:relative}
 .quote{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(34px,4.2vw,58px);line-height:1.02;letter-spacing:-.015em;margin:26px 0 28px}
 .quote em{font-style:normal;color:var(--lime)}
 .about p{color:#c9c8c2;margin-bottom:16px;max-width:520px}
-.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:34px}
-.pillar{border:1px solid var(--line);border-radius:16px;padding:18px 16px;transition:border-color .3s,transform .4s}
+.pillars{display:grid;grid-template-columns:1fr;gap:10px;margin-top:34px}
+.pillar{display:grid;grid-template-columns:minmax(170px,auto) 1fr;align-items:baseline;gap:18px;border:1px solid var(--line);border-radius:16px;padding:18px 20px;transition:border-color .3s,transform .4s}
 .pillar:hover{border-color:var(--lime);transform:translateY(-3px)}
-.pillar b{display:block;font:800 clamp(11px,1.05vw,14px)/1.2 var(--display);overflow-wrap:anywhere;text-transform:uppercase;margin-bottom:6px}
-.pillar small{color:var(--muted);font-size:13px;line-height:1.4;display:block}
+.pillar b{display:block;font:800 15px/1.2 var(--display);white-space:nowrap;text-transform:uppercase}
+.pillar small{color:var(--muted);font-size:14px;line-height:1.4;display:block}
+@media (max-width:420px){.pillar{grid-template-columns:1fr;gap:6px}}
 
 /* с чем приходят */
 .who-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:56px;flex-wrap:wrap}
@@ -493,7 +494,7 @@ footer{padding:clamp(90px,11vw,140px) 0 36px;position:relative;overflow:hidden}
       <div>
         <h4>Связаться</h4>
         <a href="#" data-link="telegram">Telegram: @kymfit</a>
-        <a href="#" data-link="instagram">Instagram: @kimonolisi_flatch</a>
+        <a href="#" data-link="instagram">Instagram*: @kimonolisi_flatch</a>
       </div>
       <div>
         <h4>Почта и телефон</h4>
@@ -504,6 +505,7 @@ footer{padding:clamp(90px,11vw,140px) 0 36px;position:relative;overflow:hidden}
     <div class="legal">
       <span>ИП Каменщикова Софья Андреевна · ИНН 540618734998</span>
       <span>© <span id="y">2026</span> · Оплата через сервис Продамус</span>
+      <span style="flex-basis:100%">* Instagram принадлежит компании Meta, признанной экстремистской организацией и запрещённой в России.</span>
     </div>
     <div class="big-word" aria-hidden="true">Ким</div>
   </div>
