@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Оплата прошла — Соня Ким</title>
+<style>
+  :root { --bg:#111311; --card:#1a1d1a; --text:#f2f4ef; --muted:#a9b0a4; --lime:#c8f04a; }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--bg); color:var(--text); font:17px/1.55 -apple-system, "Segoe UI", Roboto, sans-serif;
+         min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px; }
+  main { max-width:520px; width:100%; }
+  h1 { font:600 40px/1.1 Georgia, "Times New Roman", serif; margin-bottom:16px; }
+  h1 span { color:var(--lime); }
+  p { color:var(--muted); margin-bottom:14px; }
+  .card { background:var(--card); border-radius:18px; padding:24px; margin:24px 0; }
+  .step { display:flex; gap:12px; margin-bottom:12px; color:var(--text); }
+  .step b { color:var(--lime); min-width:20px; }
+  .btn { display:block; text-align:center; background:var(--lime); color:#111; font-weight:700; text-decoration:none;
+         padding:16px; border-radius:14px; margin-top:18px; }
+  .btn.ghost { background:transparent; color:var(--text); border:1px solid #3a3f38; font-weight:500; }
+  .hidden { display:none; }
+  small { color:var(--muted); display:block; margin-top:28px; text-align:center; }
+  small a { color:var(--muted); }
+</style>
+</head>
+<body>
+<main>
+
+  <!-- Подписка на зарядки: ?for=klub -->
+  <section id="klub" class="hidden">
+    <h1>Оплата прошла. <span>Добро пожаловать в клуб.</span></h1>
+    <p>Остался один шаг: подайте заявку в закрытый канал с зарядками.</p>
+    <div class="card">
+      <div class="step"><b>1</b><div>Нажмите кнопку ниже и в Telegram выберите «Подать заявку».</div></div>
+      <div class="step"><b>2</b><div>Я принимаю заявки сама и сверяю их с оплатами. Обычно это занимает пару часов.</div></div>
+      <div class="step"><b>3</b><div>Чтобы я вас нашла, пришлите мне в личку номер заказа или чек из письма.</div></div>
+      <a class="btn" href="https://t.me/+XCW4Jh-QdpA4ZGM1">Подать заявку в канал</a>
+      <a class="btn ghost" href="https://t.me/kymfit">Написать Соне</a>
+    </div>
+    <p>Зарядки в прямом эфире каждый день в 7:00 по Москве. Доступ на месяц, продлить можно по той же ссылке на сайте.</p>
+  </section>
+
+  <!-- Консультация: ?for=konsult -->
+  <section id="konsult" class="hidden">
+    <h1>Оплата прошла. <span>Давайте выберем время.</span></h1>
+    <p>Консультация-диагностика: разберём, что беспокоит, проведём тесты и составим стратегию дальнейших тренировок. Её стоимость засчитывается в пакет, если решите продолжить.</p>
+    <div class="card">
+      <div class="step"><b>1</b><div>Напишите мне в Telegram, что оплатили, и одной строкой, с чем хотите прийти.</div></div>
+      <div class="step"><b>2</b><div>Предложу время в зале или онлайн.</div></div>
+      <a class="btn" href="https://t.me/kymfit">Написать Соне</a>
+    </div>
+  </section>
+
+  <!-- Онлайн-программа: ?for=programma -->
+  <section id="programma" class="hidden">
+    <h1>Оплата прошла. <span>Начинаем программу.</span></h1>
+    <p>Чек придёт на почту. Чтобы собрать программу под вас, мне нужно немного узнать о вас.</p>
+    <div class="card">
+      <div class="step"><b>1</b><div>Напишите мне в Telegram, что оплатили программу, и пришлите номер заказа или чек.</div></div>
+      <div class="step"><b>2</b><div>Я задам несколько вопросов о цели, текущих тренировках и самочувствии.</div></div>
+      <div class="step"><b>3</b><div>Пришлю программу и договоримся, как будем держать связь.</div></div>
+      <a class="btn" href="https://t.me/kymfit">Написать Соне</a>
+    </div>
+  </section>
+
+  <!-- По умолчанию: любая другая оплата -->
+  <section id="other" class="hidden">
+    <h1>Оплата прошла. <span>Спасибо!</span></h1>
+    <p>Чек придёт на почту. Напишите мне в Telegram и пришлите номер заказа или чек, и договоримся о следующем шаге.</p>
+    <a class="btn" href="https://t.me/kymfit">Написать Соне</a>
+  </section>
+
+  <small><a href="/">← на главную</a> · kymfit.help@outlook.com</small>
+</main>
+<script>
+  var t = new URLSearchParams(location.search).get('for');
+  var id = (t === 'klub' || t === 'konsult' || t === 'programma') ? t : 'other';
+  document.getElementById(id).classList.remove('hidden');
+</script>
+</body>
+</html>
