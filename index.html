@@ -354,12 +354,12 @@ footer{padding:clamp(90px,11vw,140px) 0 36px;position:relative;overflow:hidden}
       <article class="plan wide start rv">
         <div class="top"><span class="label">Начать отсюда</span><span class="badge">Первый шаг</span></div>
         <h3>Консультация и&nbsp;диагностика</h3>
-        <p class="desc">Разовая встреча, на&nbsp;которой мы разбираем ваш запрос и&nbsp;цели, проводим тесты и&nbsp;диагностику, намечаем тренировочный план и&nbsp;сразу вводим первые упражнения.</p>
+        <p class="desc">Разовая встреча, на&nbsp;которой мы разбираем ваш запрос и&nbsp;цели, проводим тесты и&nbsp;диагностику, намечаем стратегию дальнейших тренировок и&nbsp;сразу вводим первые упражнения.</p>
         <div class="price"><b>6&nbsp;000&nbsp;₽</b><span>разово</span></div>
         <ul class="incl">
           <li>Разбор запроса: цели, история травм, образ жизни</li>
           <li>Функциональные тесты и&nbsp;диагностика</li>
-          <li>Набросок тренировочного плана, первые упражнения и&nbsp;рекомендации</li>
+          <li>Стратегия дальнейших тренировок, первые упражнения и&nbsp;рекомендации</li>
           <li>Подбор формата, который подойдёт именно вам</li>
         </ul>
         <a href="#" class="btn btn-lime" data-link="consult">Записаться на консультацию <span class="arr">→</span></a>
@@ -386,7 +386,7 @@ footer{padding:clamp(90px,11vw,140px) 0 36px;position:relative;overflow:hidden}
         <div class="top"><span class="label">Очно · в зале</span></div>
         <h3>Физическая реабилитация</h3>
         <p class="desc">Курс из&nbsp;8&nbsp;занятий, чтобы вернуться к&nbsp;привычной жизни после травмы, операции или долгого ограничения движений.</p>
-        <div class="price"><b>40&nbsp;000&nbsp;₽</b><span>курс из 8 занятий</span></div>
+        <div class="price"><b>40&nbsp;000&nbsp;₽</b><span>курс из 8 занятий</span><span style="flex-basis:100%;font-size:13px">Подключается после консультации, её&nbsp;стоимость засчитывается</span></div>
         <div class="stages">
           <div class="stage"><i>01</i><b>Диагностика</b><small>входит в&nbsp;курс, с&nbsp;неё начинаем</small></div>
           <div class="stage"><i>02</i><b>Коррекция</b><small>восстанавливаем то, что «выключилось»</small></div>
@@ -398,7 +398,7 @@ footer{padding:clamp(90px,11vw,140px) 0 36px;position:relative;overflow:hidden}
           <li>Домашние упражнения между занятиями</li>
         </ul>
         <p class="note">Работаю по&nbsp;назначению лечащего врача. Возьмите с&nbsp;собой заключение. Я&nbsp;не&nbsp;ставлю диагнозы и&nbsp;не&nbsp;заменяю медицинскую помощь.</p>
-        <a href="#" class="btn btn-lime" data-link="rehab">Записаться на курс <span class="arr">→</span></a>
+        <a href="#" class="btn btn-lime" data-link="consult">Начать с консультации <span class="arr">→</span></a>
       </article>
 
       <!-- Ведение -->
@@ -406,7 +406,7 @@ footer{padding:clamp(90px,11vw,140px) 0 36px;position:relative;overflow:hidden}
         <div class="top"><span class="label">Очно + онлайн</span><span class="badge">Максимум внимания</span></div>
         <h3>Ведение на&nbsp;месяц</h3>
         <p class="desc">Я&nbsp;рядом весь месяц: тренируемся в&nbsp;зале, а&nbsp;между тренировками остаюсь на&nbsp;связи.</p>
-        <div class="price"><b>45&nbsp;000&nbsp;₽</b><span>в месяц</span></div>
+        <div class="price"><b>45&nbsp;000&nbsp;₽</b><span>в месяц</span><span style="flex-basis:100%;font-size:13px">Подключается после консультации, её&nbsp;стоимость засчитывается</span></div>
         <div class="for"><strong>Кому</strong>Тем, кому важно личное внимание и&nbsp;живой контакт с&nbsp;тренером, особенно если опыта тренировок не&nbsp;было.</div>
         <ul class="incl">
           <li>Занятия в&nbsp;зале: любое количество до&nbsp;4&nbsp;в&nbsp;неделю, сумма не&nbsp;меняется</li>
@@ -416,7 +416,7 @@ footer{padding:clamp(90px,11vw,140px) 0 36px;position:relative;overflow:hidden}
           <li>Доступ к&nbsp;ежедневным зарядкам</li>
         </ul>
         <p class="note">Такое же ведение можно пройти полностью онлайн: тренировки по&nbsp;видеосвязи, до&nbsp;4&nbsp;в&nbsp;неделю, стоимость та&nbsp;же.</p>
-        <a href="#" class="btn btn-lime" data-link="month">Записаться <span class="arr">→</span></a>
+        <a href="#" class="btn btn-lime" data-link="consult">Начать с консультации <span class="arr">→</span></a>
       </article>
 
       <!-- Онлайн -->
@@ -521,11 +521,11 @@ const LINKS = {
   telegram:  "https://t.me/kymfit",
   instagram: "https://instagram.com/kimonolisi_flatch",
   trial:     "",   // ссылка на открытый канал / пост с пробной зарядкой
-  consult:   "",   // Продамус: консультация 6 000 ₽
+  consult:   "https://payform.ru/86cZsW2/",   // Продамус: консультация 6 000 ₽
   rehab:     "",   // Продамус: реабилитация 40 000 ₽
   month:     "",   // Продамус: ведение 45 000 ₽
-  online:    "",   // Продамус: онлайн-программа 16 000 ₽
-  mornings:  ""    // Продамус: подписка на зарядки 890 ₽
+  online:    "https://payform.ru/9lcZsWO/",   // Продамус: онлайн-программа 16 000 ₽
+  mornings:  "https://payform.ru/65cZtb5/"    // Продамус: зарядки 890 ₽ (разовая ссылка)
 };
 
 document.querySelectorAll("[data-link]").forEach(a=>{
